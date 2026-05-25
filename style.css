@@ -20,6 +20,7 @@
   padding: 6px 10px;
   border-radius: 4px;
   border: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
 
 .btn-secondary {
@@ -28,6 +29,30 @@
   padding: 6px 10px;
   border-radius: 4px;
   border: 2px solid white;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.nav-button {
+  height: fit-content;
+  padding: 8px 12px;
+  border-radius: 4px;
+  background-color: #30b868;
+  color: white;
+  border: none;
+  font-size: medium;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.nav-button:hover,
+.btn-primary:hover,
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.12);
 }
 /* NAV SECTION  */
 
@@ -65,10 +90,14 @@
 
 .hero {
   display: flex;
-  height: 80vh;
+  min-height: 80vh;
   align-items: center;
   justify-content: center;
   background-image: url("./assets/hero-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 60px 20px;
 }
 
 .hero-container {
@@ -189,9 +218,34 @@ height: 384px;
   height: 150px;
   background-color: #001931;
 }
+
+
+
 .footer-container {
   display: flex;
   padding: 20px;
   justify-content: space-between;
   border-bottom: .4px solid #E5E7EB ;
+}
+
+.footer-container > div:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+}
+
+.footer-social {
+  list-style: none;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-social img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
 }
